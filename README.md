@@ -13,6 +13,12 @@ Tempat belanja **kerajinan tangan lengkap**, aesthetic, dan berkualitas 💗
 ---
 
 ## 🌷 **✨ Overview**
+<img width="1920" height="6185" alt="screencapture-localhost-UKK-WEBSITE-customer-2025-11-28-09_08_45" src="https://github.com/user-attachments/assets/50798b73-8b38-490a-a495-20a97022a872" />
+
+<img width="1920" height="912" alt="Screenshot 2025-11-28 091045" src="https://github.com/user-attachments/assets/a7b7c5ad-9e1e-4eb3-9657-a9205d9b7fea" />
+<img width="1920" height="912" alt="Screenshot 2025-11-28 091003" src="https://github.com/user-attachments/assets/0ef4083f-b71e-4298-bffb-21c1271d17ae" />
+<img width="1920" height="911" alt="Screenshot 2025-11-28 091119" src="https://github.com/user-attachments/assets/ebb33e93-571e-4838-b09b-aee1632dde41" />
+
 
 **PastParadise** adalah platform e-commerce bertema pink aesthetic yang berfokus pada **penjualan produk kerajinan tangan (handmade crafts)**.  
 Website ini dirancang untuk menjadi **tempat belanja kerajinan paling lengkap**, mulai dari:
@@ -88,8 +94,56 @@ Setiap fiturnya dirancang agar:
 
 ---
 
-## 🌸 **✨ Installation**
-*(tetap sama seperti sebelumnya)*
+
+---
+
+## 💗 **✨ Partial Database Overview**
+
+### 🧚 customer
+| Kolom | Tipe |
+|-------|------|
+| id_customer | varchar |
+| id_role | int |
+| nama_customer | varchar |
+| email_customer | varchar |
+| no_hp_customer | varchar |
+| alamat_default_customer | text |
+| password_customer | varchar (hash) |
+| image_customer | varchar |
+| status_akun | enum |
+
+### 🧚 product
+| Kolom | Tipe |
+|--------|------|
+| id_product_sku | varchar |
+| nama_product | varchar |
+| harga_product | int |
+| image_product | varchar |
+
+### 🧚 cart
+| Kolom | Tipe |
+|--------|------|
+| id_cart | int |
+| id_customer / guest_session | varchar |
+| id_product_sku | varchar |
+| quantity | int |
+
+---
+
+## 🎀 **✨ Installation**
+
+### 1️⃣ Clone repository
+git clone https://github.com/BirgitaPaskalina/Web_PASTPARADISE.git
+### 2️⃣ Pindahkan ke folder Laragon
+C:/laragon/www/PastParadise
+### 3️⃣ Import database
+Buka phpMyAdmin
+Buat DB: pastparadise
+Import file .sql
+### 4️⃣ Atur database.php
+$conn = new mysqli("localhost", "root", "", "pastparadise");
+### 5️⃣ Jalankan di browser
+http://localhost/PastParadise/login.php
 
 ---
 
